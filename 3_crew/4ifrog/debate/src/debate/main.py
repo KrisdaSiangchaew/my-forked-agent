@@ -14,11 +14,12 @@ def run():
     """
     inputs = {
         'motion': 'There should be more venture capitalist investments in piezoelectric hemodynamic sensing platform for applicaitons such as: \
-            carotid artery health screening, blood-flow vitality tracking for aging and cognitive-health, AV fistula velocity monitoring in dialysis workflows'
+            carotid artery health screening, blood-flow vitality tracking for aging and cognitive-health, and AV fistula velocity monitoring in dialysis workflows'
     }
 
     try:
-        Debate().crew().kickoff(inputs=inputs)
+        result = Debate().crew().kickoff(inputs=inputs)
+        print(result.raw)
     except Exception as e:
         raise Exception(f"An error occurred while running the crew: {e}")
 
